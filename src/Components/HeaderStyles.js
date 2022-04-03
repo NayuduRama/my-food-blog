@@ -7,7 +7,7 @@ export const Container = styled.div`
 export const Header = styled.div`
 display:flex;
 flex-direction: row;
-color: white;
+color: #61DBFB;
 background-color: black;
 padding: 20px;
 font-size: 25px;
