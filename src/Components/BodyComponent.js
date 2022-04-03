@@ -1,6 +1,6 @@
 import React from 'react';
 import applogo from '../logo.svg';
-import {RecipesList, Recipe, RecipeImage, RecipeName, Ingredients, Findoutmore} from './BodyStyles';``
+import {RecipesList, Recipe, RecipeImage, RecipeName, Ingredients, Findoutmore} from './BodyStyles';
 
 function BodyComponent(props) {
     return (
