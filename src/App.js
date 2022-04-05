@@ -1,14 +1,10 @@
-import React from 'react'; 
-import BodyComponent from './Components/BodyComponent';
-import HeaderComponent from './Components/HeaderComponent'; 
-import Home from './Components/home';
+import React from 'react';  
+import Main from './Components/main';
 
 function App() {
   return ( 
-    <>
-      <HeaderComponent /> 
-      {/* <BodyComponent /> */}
-      {/* <Home/> */}
+    <> 
+      <Main />
     </>
   );
 }
