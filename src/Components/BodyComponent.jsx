@@ -1,18 +1,13 @@
 import React from 'react';   
 import { Button } from 'react-bootstrap';
 import {RecipesList, Recipe, RecipeImage, RecipeName, Ingredients,
-     Findoutmore} from './BodyStyles';     
+     Findoutmore, IngredientImage} from './BodyStyles';     
 import Home from './home';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogActions from '@material-ui/core/DialogActions'; 
-import styled from 'styled-components'; 
-const IngredientImage = styled.img`
-height: 50px;
-object-fit: cover;
-border-radius: 10px;  
-`;
+import DialogActions from '@material-ui/core/DialogActions';  
+
  
 function BodyComponent(props) { 
     const RecipeComponent = (props) => {

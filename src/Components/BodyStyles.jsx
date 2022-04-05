@@ -45,3 +45,8 @@ export const Findoutmore = styled(Ingredients)`
 color: #27d64d;
 border: solid #27d64d;
 `;
+export const IngredientImage = styled.img`
+height: 50px;
+object-fit: cover;
+border-radius: 10px;  
+`;
