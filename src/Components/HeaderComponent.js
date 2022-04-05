@@ -14,6 +14,13 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContentText from '@material-ui/core/DialogContentText';
+import styled from 'styled-components';
+
+const IngredientImage = styled.img`
+height: 50px;
+object-fit: cover;
+border-radius: 10px;  
+`;
  
 function HeaderComponent() {
     const [myTimeoutId, setMyTimeoutId] = useState();
@@ -44,6 +51,7 @@ function HeaderComponent() {
                      <table className="table table-light table-hover">
                         <thead>
                             <tr> 
+                            <th scope="col">Image</th>
                             <th scope="col">Ingredient</th>
                             <th scope="col">Weight</th> 
                             </tr>
@@ -51,6 +59,7 @@ function HeaderComponent() {
                         <tbody>
                             {resObj.recipe.ingredients.map((ingredientsObj) => (
                                 <tr> 
+                                    <td><IngredientImage src={ingredientsObj.image}/></td> 
                                     <td>{ingredientsObj.text}</td>
                                     <td>{ingredientsObj.weight}</td> 
                                 </tr>

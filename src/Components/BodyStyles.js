@@ -20,11 +20,13 @@ box-shadow: 0 3px 10px 0 #aaa;
 `;
 export const RecipeImage = styled.img`
 height: 200px;
+object-fit: cover;
+border-radius: 10px;  
 `;
 export const RecipeName = styled.span`
 font-size: 18px;
 font-weight: bold;
-color: #2376cf;
+color: #34ebd8;
 text-align: center;
 margin: 10px 10px;
 `;
