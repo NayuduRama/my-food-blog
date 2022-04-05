@@ -6,13 +6,16 @@ flex-direction: row;
 padding: 30px;
 justify-content: space-evenly;
 flex-wrap: wrap;
-gap: 20px
+gap: 20px;
+background-color: black;
 `;
 export const Recipe = styled.div`
 display: flex;
 flex-direction: column;
 paddig: 10px;
 width: 300px;
+border: solid 1px white;
+border-radius: 10px;
 box-shadow: 0 3px 10px 0 #aaa;
 `;
 export const RecipeImage = styled.img`
