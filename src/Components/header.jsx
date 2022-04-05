@@ -1,7 +1,7 @@
 import React from 'react';  
 import { Header, AppIconComponent, 
     AppNameComponent,SearchComponent, SearchIcon, 
-    SearchInputComponent} from './HeaderStyles'   
+    SearchInputComponent} from './headerStyles'   
  
  
 function HeaderComponent(props) {  

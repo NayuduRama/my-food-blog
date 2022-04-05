@@ -1,7 +1,7 @@
 import React from 'react';   
 import { Button } from 'react-bootstrap';
 import {RecipesList, Recipe, RecipeImage, RecipeName, Ingredients,
-     Findoutmore, IngredientImage} from './BodyStyles';     
+     Findoutmore, IngredientImage} from './bodyStyles';     
 import Home from './home';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';

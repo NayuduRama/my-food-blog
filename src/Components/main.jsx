@@ -3,8 +3,8 @@ import applogo from '../logo.svg';
 import search from '../search.svg';
 import axios from 'axios';  
 import styled from 'styled-components';
-import HeaderComponent from './HeaderComponent';
-import BodyComponent from './BodyComponent';
+import HeaderComponent from './header';
+import BodyComponent from './body';
 const Container = styled.div`
                     display: flex;
                     flex-direction: column;
