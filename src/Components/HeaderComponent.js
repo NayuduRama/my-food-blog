@@ -2,12 +2,19 @@ import React, { useState } from 'react';
 import applogo from '../logo.svg';
 import search from '../search.svg';
 import axios from 'axios';
+import { Button } from 'react-bootstrap';
 import {RecipesList, Recipe, RecipeImage, RecipeName, Ingredients,
      Findoutmore} from './BodyStyles';
 import { Header, Container, AppIconComponent, 
     AppNameComponent,SearchComponent, SearchIcon, 
     SearchInputComponent} from './HeaderStyles'     
 import Home from './home';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContentText from '@material-ui/core/DialogContentText';
+ 
 function HeaderComponent() {
     const [myTimeoutId, setMyTimeoutId] = useState();
     const [recipeList, setRecipeList] = useState([]);
@@ -28,20 +35,49 @@ function HeaderComponent() {
     }
     const RecipeComponent = (props) => {
         const { resObj } = props;
-        console.log("props:",props);
+        const [display, setDisplay] = React.useState(false); 
         return (
+            <>
+            <Dialog open={display}>
+                <DialogTitle>Ingredients</DialogTitle>
+                <DialogContent> 
+                     <table className="table table-light table-hover">
+                        <thead>
+                            <tr> 
+                            <th scope="col">Ingredient</th>
+                            <th scope="col">Weight</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {resObj.recipe.ingredients.map((ingredientsObj) => (
+                                <tr> 
+                                    <td>{ingredientsObj.text}</td>
+                                    <td>{ingredientsObj.weight}</td> 
+                                </tr>
+                            ))}
+                            {/* {resObj.recipe.ingredients.text} */}
+                        </tbody>
+                     </table>
+                </DialogContent> 
+                <DialogActions>
+                    <Button  className="btn btn-info" onClick={() => window.open(resObj.recipe.url)}>See more</Button> 
+                    <Button className="btn btn-danger" onClick={() => setDisplay(false)}>Close</Button> 
+                </DialogActions>
+            </Dialog>
              <Recipe> 
                 <RecipeImage src={resObj.recipe.image}/>
                 <RecipeName>{resObj.recipe.label}</RecipeName>
-                <Ingredients>Ingredients</Ingredients>
+                <Ingredients onClick={() => setDisplay(true)}>Ingredients</Ingredients>
                 <Findoutmore  onClick={() => window.open(resObj.recipe.url)}>Findoutmore</Findoutmore>   
              </Recipe>    
+            </>
         )
     }
     return ( 
         <>
         <Container >
-            <Header> 
+            <Header>  
+                
                 <AppNameComponent>
                     <AppIconComponent src={applogo}/>
                      Recipe Finder
