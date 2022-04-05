@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import applogo from '../logo.svg';
 import search from '../search.svg';
 import axios from 'axios';
-import {RecipesList, Recipe, RecipeImage, 
-    RecipeName, Ingredients, Findoutmore} from './BodyStyles';
+import {RecipesList, Recipe, RecipeImage, RecipeName, Ingredients,
+     Findoutmore} from './BodyStyles';
 import { Header, Container, AppIconComponent, 
     AppNameComponent,SearchComponent, SearchIcon, 
     SearchInputComponent} from './HeaderStyles'     
@@ -34,7 +34,7 @@ function HeaderComponent() {
                 <RecipeImage src={resObj.recipe.image}/>
                 <RecipeName>{resObj.recipe.label}</RecipeName>
                 <Ingredients>Ingredients</Ingredients>
-                <Findoutmore>Findoutmore</Findoutmore>   
+                <Findoutmore  onClick={() => window.open(resObj.recipe.url)}>Findoutmore</Findoutmore>   
              </Recipe>    
         )
     }
