@@ -1,12 +1,12 @@
 import React from 'react';  
-import { Header, AppIconComponent, 
+import { Headers, AppIconComponent, 
     AppNameComponent,SearchComponent, SearchIcon, 
     SearchInputComponent} from './headerStyles'   
  
  
-function HeaderComponent(props) {  
+function Header(props) {  
     return (  
-            <Header>   
+            <Headers>   
                 <AppNameComponent>
                     <AppIconComponent src={props.applogo}/>
                       Recipe Finder
@@ -15,8 +15,8 @@ function HeaderComponent(props) {
                         <SearchIcon src={props.search}/>
                         <SearchInputComponent placeholder='Seach for recipies with items' onChange={props.onChange}/>
                     </SearchComponent>  
-            </Header>  
+            </Headers>  
      );
 }
 
-export default HeaderComponent;
+export default Header;

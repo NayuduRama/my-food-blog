@@ -3,8 +3,8 @@ import applogo from '../logo.svg';
 import search from '../search.svg';
 import axios from 'axios';  
 import styled from 'styled-components';
-import HeaderComponent from './header';
-import BodyComponent from './body';
+import Header from './header';
+import Body from './body';
 const Container = styled.div`
                     display: flex;
                     flex-direction: column;
@@ -31,8 +31,8 @@ function Main() {
     return ( 
         <>
         <Container > 
-            <HeaderComponent applogo={applogo} search={search} onChange={onChangeEvent} />
-            <BodyComponent recipeList={recipeList} /> 
+            <Header applogo={applogo} search={search} onChange={onChangeEvent} />
+            <Body recipeList={recipeList} /> 
        </Container>
         </>
      );

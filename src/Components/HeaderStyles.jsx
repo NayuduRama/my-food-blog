@@ -4,7 +4,7 @@ export const Container = styled.div`
                     display: flex;
                     flex-direction: column;
                     `;
-export const Header = styled.div`
+export const Headers = styled.div`
 display:flex;
 flex-direction: row;
 color: #61DBFB;

@@ -9,7 +9,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';  
 
  
-function BodyComponent(props) { 
+function Body(props) { 
     const RecipeComponent = (props) => {
         const { resObj } = props;
         const [display, setDisplay] = React.useState(false); 
@@ -27,8 +27,8 @@ function BodyComponent(props) {
                             </tr>
                         </thead>
                         <tbody>
-                            {resObj.recipe.ingredients.map((ingredientsObj) => (
-                                <tr> 
+                            {resObj.recipe.ingredients.map((ingredientsObj, index) => (
+                                <tr key={index}> 
                                     <td><IngredientImage src={ingredientsObj.image}/></td> 
                                     <td>{ingredientsObj.text}</td>
                                     <td>{ingredientsObj.weight}</td> 
@@ -56,7 +56,7 @@ function BodyComponent(props) {
             {(props.recipeList.length ) ? 
             <RecipesList>
                 {
-                (props.recipeList.map((resObj) => <RecipeComponent
+                (props.recipeList.map((resObj, index) => <RecipeComponent key={index}
                     resObj={resObj}/>)) }
             </RecipesList>
                 : 
@@ -66,4 +66,4 @@ function BodyComponent(props) {
 }
  
 
-export default BodyComponent;
+export default Body;
