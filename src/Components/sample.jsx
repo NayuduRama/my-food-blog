@@ -3,15 +3,16 @@ import { Button } from 'react-bootstrap';
 import {RecipesList, Recipe, RecipeImage, RecipeName, Ingredients,
      Findoutmore, IngredientImage} from './bodyStyles';     
 import Home from './home';
-import { Modal } from 'react-bootstrap';  
+import { Modal } from 'react-bootstrap';    
 
  
-function Body(props) { 
+function Sample(props) { 
     const RecipeComponent = (props) => {
         const { resObj } = props;
-        const [display, setDisplay] = React.useState(false); 
+        const [display, setDisplay] = React.useState(false);  
+
         return (
-            <>
+            <> 
             <Modal show={display} onHide={() => setDisplay(false)}>
                 <Modal.Header closeButton>
                      <Modal.Title>Ingredients</Modal.Title>
@@ -65,4 +66,4 @@ function Body(props) {
 }
  
 
-export default Body;
+export default Sample;
