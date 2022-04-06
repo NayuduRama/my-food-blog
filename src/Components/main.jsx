@@ -16,10 +16,8 @@ function Main() {
     const APP_KEY ="94c5357cb5486d2ac2b013bc0dc2c6fa";
     const getRecipe = async (searchItem) => {
             const res = await axios.get(`https://api.edamam.com/search?q=${searchItem}&app_id=${APP_ID}&app_key=${APP_KEY}`
-            )
-            .then(function (res){
-                 setRecipeList(res.data.hits);  
-            } ) 
+            );
+            setRecipeList(res.data.hits);  
     }
     const onChangeEvent = (e) => {
         e.persist();

@@ -1,6 +1,5 @@
 import React from 'react';  
-import Main from './Components/main'; 
-import Sample from './Components/sample';
+import Main from './Components/main';  
 
 function App() {
   return ( 
